@@ -1,39 +1,82 @@
-# Clever's Frontend Coding Interview
-👋 Hello!, Hola!, Witam!
+# Clever Project
 
-Thank you for taking the time to interview with Clever. This coding challenge is meant to be a _short_ exercise to see how you code on the frontend. Please don't spend more than a couple hours, and certainly don't stress. Treat it like you would any other coding task. Throw on some tunes 🎶, sit back, relax 😌, and code!
+## Overview
+Clever Project is a modern web application designed to provide users with a seamless experience in managing their photos and authentication. It leverages a robust tech stack to ensure high performance, security, and scalability.
 
-### Requirements
-- Create a small web app using React and Typescript.
-- Up to you how you scaffold it (eg. Next, Vite, even CRA).
-- However, please use either `npm` or `yarn.
-- It will utilize the Pexels API to pull in some photos. Details below.
-- We'd like you to create two (mobile responsive) pages:
-  1. Sign in
-  2. All photos
-- You can fork this repo and commit your code there. Once done, please add the following users as members so we can review:
-  - James Crain (@imjamescrain)
-  - Jimmy Lien (@jlien)
-  - Nick Clucas (@nickcluc)
-  - Ryan McCue (@rymccue)
-- We'll circle back with you and review 1:1.
+## Tech Stack
+- **Frontend**: React, TypeScript, Tailwind CSS
+- **Backend**: Node.js, Express - to simulate the login
+- **Authentication**: JSON Web Tokens (JWT)
+- **API**: Axios for HTTP requests
+- **State Management**: React Context, React Query
+- **Testing**: Vitest
+- **Build Tools**: Vite
+- **Others**: dotenv for environment configuration
 
-### Details
-- Mocks for these pages are provided in Figma. You should have been sent an invite to access them, if not let us know.
-  - [Figma Mocks](https://www.figma.com/file/wr1seCuhlRtoFGuz1iWgyF/Frontend-Coding-Mocks?type=design&node-id=0%3A1&mode=design&t=Uw1av3TypDUDcLAd-1)
-  - We are looking for attention to detail when implementing these.
-- There is also a logo and an icon provided (SVGs) included in this repo.
-- Pexels API Info
-  - Api Key: `Mz0iC21IFLz9HuN8ypIbJ54l8OuGnpW2IsVoQrYBEyagQXt1YeBEA7H0`
-  - Include an `Authorization` header with this value.
-  - Endpoint: https://api.pexels.com/v1/search?query=nature&per_page=10
-  - Documenation: https://www.pexels.com/api/documentation/#photos-search
-- Make the "Sign in" page functional. However, you can spoof authentication any way you'd like (eg. save a value to local storage, etc).
-- Make "All photos" require authentication to access.
-- Only need to show 10 photos on the "All photos" page. Paging is not required.
+## Features
+- **User Authentication**: Secure login using JWT tokens.
+- **Photo Management**: View and manage a list of photos.
+- **Responsive Design**: Mobile-first design with Tailwind CSS.
+- **Favorite Photos**: Mark and manage favorite photos.
+- **Lazy Loading**: Optimize image loading for better performance.
 
-### Final Thoughts
+## Project Structure
+```
+/server              # Backend code
+/src
+  /components        # Reusable components
+  /context           # Context API for state management
+  /features          # Specific features like auth and photos
+  /hooks             # Custom / Mutations / Query Global hooks
+  /pages             # Application pages
+  /services          # API services
+  /utils             # Utility functions and validation schemas
+/tests               # Test cases and configurations
+```
 
-Remember, please don't spend too much time on this. In fact, save a little time and **add a section to the README** outlining what else you'd do differently to make this a production ready app.
+## Getting Started
 
-**Any questions**, just let us know. Send emails to <a href="mailto:james.crain@movewithclever.com">james.crain@movewithclever.com</a>. Good luck!
+### Prerequisites
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/clever-project.git
+   cd clever-project
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the following:
+   ```
+  PEXELS_API_KEY='Mz0iC21IFLz9HuN8ypIbJ54l8OuGnpW2IsVoQrYBEyagQXt1YeBEA7H0'
+JWT_SECRET='9f74a5d3e0c14fce9b3c4b8e6a7f8d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c'
+   ```
+
+### Running the Application
+1. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+2. Open your browser and navigate to `http://localhost:5173` to view the application.
+
+### Running Tests
+```bash
+npm run test
+# or
+yarn test
+```
+
+
+
