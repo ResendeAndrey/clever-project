@@ -18,7 +18,7 @@ import { UserPayloadProps, UserProps } from "../../features/auth/types/user";
 import { UseMutateAsyncFunction, useMutation } from "@tanstack/react-query";
 import { RequestLogin } from "@/features/auth/services/login";
 import { toast } from "sonner";
-import useCheckStorage from "@/hooks/customs/useCheckStorage";
+import useCheckStorage from "@/hooks/customs/useCheckStorage/useCheckStorage";
 import api from "@/services/api";
 
 interface AuthContextType {
