@@ -34,7 +34,7 @@ export const PhotoCard = ({ photo }: PhotoCardProps) => {
           className="rounded-lg w-[75px] h-[75px] shrink-0"
         />
 
-        <div className="flex flex-col flex-1 md:max-w-[300px]">
+        <div className="flex flex-col flex-1  md:max-w-[300px] ">
           <span className="font-bold text-sm">{photo.photographer}</span>
           <span className="text-sm">{photo.alt}</span>
           <div className="flex gap-1 items-center text-sm">
@@ -48,7 +48,7 @@ export const PhotoCard = ({ photo }: PhotoCardProps) => {
       </div>
       <a
         href={photo.photographer_url}
-        className="flex gap-1 text-primary text-[12px] items-center"
+        className="flex gap-1 text-primary text-[12px] items-center shrink-0"
         target="_blank"
         title={photo.photographer}
       >

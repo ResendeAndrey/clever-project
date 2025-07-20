@@ -15,7 +15,7 @@ const PhotosList = () => {
     return <Loading />;
   }
   return (
-    <div className="flex items-center h-screen my-10 gap-10 flex-col ">
+    <div className="flex items-center my-10 gap-10 flex-col ">
       <div className="flex flex-col items-start gap-5 w-[90%] md:max-w-[600px] md:w-full ">
         <img src={Logo} alt="Logo" />
         <p className="text-2xl font-bold">All photos</p>
